@@ -1,0 +1,211 @@
+﻿/* =========================
+   VARIABILI COLORI
+========================= */
+:root {
+    --blu-app: #1E1E3C; /* new Color(30,30,60) */
+    --blu-sidebar: #1E1E3C;
+    --grigio-bg: #f2f2f2;
+    --bianco: #ffffff;
+    --testo: #333;
+}
+
+/* =========================
+   RESET BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--grigio-bg);
+    color: var(--testo);
+    overflow-x: hidden;
+}
+
+/* =========================
+   LAYOUT GENERALE
+========================= */
+.layout {
+    display: flex;
+}
+
+/* =========================
+   SIDEBAR FISSA A SINISTRA
+========================= */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background-color: var(--blu-sidebar);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+   
+}
+
+    .logo img {
+        width: 40px;
+        border-radius: 50px;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+/* MENU */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: opacity 0.2s ease;
+    }
+
+        .menu a:hover {
+            opacity: 0.7;
+        }
+
+/* =========================
+   CONTENUTO A DESTRA
+========================= */
+.content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    padding: 40px;
+}
+
+/* =========================
+   SEZIONI + ANIMAZIONE
+========================= */
+.sezione {
+    min-height: 100vh;
+    padding-top: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+    .sezione.attiva {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .sezione h1,
+    .sezione h2 {
+        margin-bottom: 20px;
+        color: var(--blu-app);
+    }
+
+/* =========================
+   HR OMBREGGIATO
+========================= */
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--blu-app);
+    box-shadow: 0 3px 8px rgba(30, 30, 60, 0.5);
+    margin: 60px 0;
+}
+
+/* =========================
+   BURGER BUTTON (SOLO MOBILE)
+========================= */
+.burger-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.6rem;
+    padding: 8px 14px;
+    background-color: var(--blu-app);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    z-index: 2000;
+}
+
+/* =========================
+   PANNELLO LATERALE DESTRO
+   CON TORNA SU
+========================= */
+#sidePanel {
+    position: fixed;
+    right: 20px;
+    left: auto !important;
+    bottom: 20px;
+    transform: translateY(-50%);
+    background: rgba(30, 30, 60, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 12px;
+    border-radius: 30px;
+    z-index: 9999;
+}
+
+    /* Bottone interno */
+    #sidePanel button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        font-size: 1.25rem;
+        background-color: var(--blu-app);
+        border-color: var(--blu-app);
+        color: white;
+        opacity: 0.1;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+        #sidePanel button:hover {
+            opacity: 0.2;
+            transform: scale(1.08);
+        }
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .burger-btn {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+        .sidebar.aperta {
+            transform: translateX(0);
+        }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #sidePanel {
+        right: 10px;
+    }
+}

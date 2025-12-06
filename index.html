@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>FreeStudio – Gestionale Desktop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- CSS PERSONALIZZATO -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BURGER BUTTON (SOLO MOBILE) -->
+    <button class="burger-btn" id="menuToggle">☰</button>
+
+    <div class="layout">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="FreeStudio Logo">
+                <span>FreeStudio</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#home">Home</a>
+                <a href="#features">Caratteristiche</a>
+                <a href="#preview">Anteprima</a>
+                <a href="#sviluppo">Sviluppo</a>
+                <a href="#contatti">Profilo</a>
+            </nav>
+        </aside>
+
+        <!-- ================= CONTENUTO ================= -->
+        <main class="content">
+
+            <!-- HOME -->
+            <section id="home" class="sezione">
+                <h1>FreeStudio</h1>
+                <h4>Gestionale Desktop professionale per liberi professionisti</h4>
+
+                <p class="mt-4">
+                    FreeStudio è un’applicazione desktop progettata per semplificare la gestione di
+                    clienti, progetti e fatture in un unico ambiente leggero, intuitivo e professionale.
+                </p>
+
+                <p class="fst-italic">
+                    Progetto sviluppato in Java, Swing e MySQL con database generato automaticamente.
+                </p>
+
+                <!-- CARD VALORI -->
+                <div class="row g-4 mt-5 text-center">
+                    <div class="col-md-4">
+                        <div class="card p-4 shadow-sm h-100">
+                            <h5>Semplicità</h5>
+                            <p>Un’unica applicazione per gestire tutte le attività principali senza complessità inutili.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4 shadow-sm h-100">
+                            <h5>Organizzazione</h5>
+                            <p>Dati sempre ordinati, accessibili e sotto controllo in ogni momento.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4 shadow-sm h-100">
+                            <h5>Professionalità</h5>
+                            <p>Uno strumento concreto, pensato per un utilizzo reale nel lavoro quotidiano.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features" class="sezione">
+                <h2>Caratteristiche Principali</h2>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow-sm">
+                            <h5>Gestione Clienti</h5>
+                            <p>Anagrafiche complete, ricerche rapide, gestione stato.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow-sm">
+                            <h5>Gestione Progetti</h5>
+                            <p>Creazione, priorità, avanzamento e monitoraggio lavori.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow-sm">
+                            <h5>Gestione Fatture</h5>
+                            <p>Inserimento, stato pagamento e riepiloghi automatici.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow-sm">
+                            <h5>Dashboard</h5>
+                            <p>Statistiche e KPI sempre sotto controllo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- ANTEPRIMA -->
+            <section id="preview" class="sezione">
+                <h2>Anteprima Applicazione</h2>
+
+                <div class="row align-items-center my-5">
+                    <div class="col-md-6">
+                        <img src="img/clienti.png" class="img-fluid rounded shadow-sm" alt="Clienti">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Anagrafica Clienti</h5>
+                        <p>Gestione completa con inserimento, modifica, ricerca e archivio.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center my-5 flex-md-row-reverse">
+                    <div class="col-md-6">
+                        <img src="img/progetti.png" class="img-fluid rounded shadow-sm" alt="Progetti">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Gestione Progetti</h5>
+                        <p>Monitoraggio stato, priorità e collegamento diretto ai clienti.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center my-5">
+                    <div class="col-md-6">
+                        <img src="img/dashboard.png" class="img-fluid rounded shadow-sm" alt="Dashboard">
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Dashboard</h5>
+                        <p>Vista immediata dei dati principali sempre aggiornata.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SVILUPPO -->
+            <section id="sviluppo" class="sezione">
+                <h2>Processo di Sviluppo</h2>
+
+                <ul class="mt-3">
+                    <li>Analisi del problema</li>
+                    <li>Progettazione database</li>
+                    <li>Modulo clienti</li>
+                    <li>Modulo progetti</li>
+                    <li>Modulo fatture</li>
+                    <li>Dashboard e rifiniture</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- PROFILO + FORM -->
+            <section id="contatti" class="sezione">
+                <h2>Profilo Sviluppatore</h2>
+
+                <div class="row mt-4">
+
+                    <!-- PROFILO SX -->
+                    <div class="col-md-6">
+                        <h4>Daniele Galluzzi</h4>
+                        <p>Junior Java Developer</p>
+
+                        <p>
+                            Junior Full-Stack Developer in formazione, con una propensione per la programmazione Java
+                            e lo sviluppo di applicazioni desktop e web. Esperienza tecnica-industriale, problem solving,
+                            lavoro di squadra e precisione.
+                        </p>
+
+                        <h4 class="mt-4">Contatti & Social</h4>
+
+                        <div class="card p-3 shadow-sm mt-3">
+
+                            <!-- EMAIL -->
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                                <a href="mailto:daniele.galluzzi.dev@gmail.com" class="text-decoration-none">
+                                    daniele.galluzzi.dev@gmail.com
+                                </a>
+                            </div>
+
+                            <!-- GITHUB -->
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-github me-2 text-dark"></i>
+                                <a href="https://github.com/DanieleGalluzzi" target="_blank" class="text-decoration-none">
+                                    github.com/DanieleGalluzzi
+                                </a>
+                            </div>
+
+                            <!-- LINKEDIN -->
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-linkedin me-2 text-primary"></i>
+                                <a href="https://www.linkedin.com/in/daniele-galluzzi/" target="_blank" class="text-decoration-none">
+                                    linkedin.com/in/daniele-galluzzi
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <h4 class="mt-4">Competenze Tecniche</h4>
+
+                        <h5 class="mt-3">Back-end</h5>
+                        <ul>
+                            <li>Java</li>
+                            <li>Swing</li>
+                            <li>MySQL</li>
+                            <li>JDBC</li>
+                        </ul>
+
+                        <h5 class="mt-3">Front-end</h5>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                        <h5 class="mt-3">Strumenti</h5>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>Eclipse</li>
+                            <li>MySQL Workbench</li>
+                            <li>MySQL Server</li>
+                            <li>GitHub</li>
+                            <li>GitHub Desktop</li>
+                        </ul>
+                    </div>
+
+                    <!-- FORM DX -->
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow-sm">
+                            <h4 class="mb-3">Contattami</h4>
+
+                            <form action="https://formspree.io/f/xblnkbgo" method="POST">
+
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <div class="mb-3">
+                                    <label class="form-label">La tua Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Messaggio</label>
+                                    <textarea name="message" class="form-control" rows="5" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Invia Messaggio
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PANNELLO LATERALE DESTRO -->
+    <div id="sidePanel">
+        <button id="scrollTopBtn" class="btn shadow">⬆</button>
+    </div>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
