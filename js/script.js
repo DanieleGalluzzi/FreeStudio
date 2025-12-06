@@ -49,53 +49,27 @@ scrollTopBtn.addEventListener("click", () => {
     });
 });
 
-// ===== GALLERIA IMMAGINI CON FRECCE =====
-
+// MODALE IMMAGINI ANTEPRIMA
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.querySelector(".close-modal");
-const leftArrow = document.querySelector(".nav-arrow.left");
-const rightArrow = document.querySelector(".nav-arrow.right");
 
-const images = document.querySelectorAll("#preview img");
-let currentIndex = 0;
-
-// Apertura immagine
-images.forEach((img, index) => {
+document.querySelectorAll("#preview img").forEach(img => {
     img.addEventListener("click", () => {
         modal.style.display = "block";
         modalImg.src = img.src;
-        currentIndex = index;
     });
 });
 
-// Chiusura
 closeBtn.onclick = () => {
     modal.style.display = "none";
 };
 
-// Click fuori immagine per chiudere
+// Chiude cliccando fuori dall'immagine
 modal.onclick = (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
     }
 };
 
-// Freccia DESTRA
-rightArrow.onclick = () => {
-    currentIndex++;
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-    modalImg.src = images[currentIndex].src;
-};
-
-// Freccia SINISTRA
-leftArrow.onclick = () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-    modalImg.src = images[currentIndex].src;
-};
 

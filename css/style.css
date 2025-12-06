@@ -209,7 +209,7 @@ hr {
         right: 10px;
     }
 
-    /* ===== MODALE GALLERIA IMMAGINI ===== */
+    /* MODALE IMMAGINI */
     .img-modal {
         display: none;
         position: fixed;
@@ -226,7 +226,7 @@ hr {
         display: block;
         margin: auto;
         max-width: 90%;
-        max-height: 85%;
+        max-height: 90%;
         border-radius: 10px;
     }
 
@@ -237,38 +237,18 @@ hr {
         color: white;
         font-size: 40px;
         cursor: pointer;
-        user-select: none;
     }
 
-    /* ===== FRECCE ===== */
-    .nav-arrow {
-        position: absolute;
-        top: 50%;
-        color: white;
-        font-size: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        user-select: none;
-        padding: 10px;
-    }
-
-        .nav-arrow.left {
-            left: 30px;
-        }
-
-        .nav-arrow.right {
-            right: 30px;
-        }
-
-    /* Hover immagini anteprima */
+    /* Effetto hover sulle immagini */
     #preview img {
         cursor: pointer;
         transition: transform 0.3s;
     }
 
         #preview img:hover {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
+
 
 
 
