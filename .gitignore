@@ -1,0 +1,17 @@
+# ==== Java / Eclipse build ====
+app/bin/
+app/dist/
+app/build/
+*.class
+
+# ==== Executable & packages ====
+*.jar
+*.exe
+
+# ==== Logs ====
+*.log
+
+# ==== IDE settings ====
+.settings/
+.idea/
+.vscode/
